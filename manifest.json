@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "UnNPTEL",
+  "version": "1.5.0",
+  "description": "",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://nptel.ac.in/*",
+        "*://*.nptel.ac.in/*"
+      ],
+      "js": ["injected.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://nptel.ac.in/*",
+        "*://*.nptel.ac.in/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+
+  "icons": {
+    "16":  "logo.png",
+    "48":  "logo.png",
+    "128": "logo.png"
+  },
+
+  "permissions": []
+}
+
+
